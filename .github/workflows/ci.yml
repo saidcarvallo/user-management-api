@@ -28,8 +28,7 @@ jobs:
         # Asumiendo que usas pytest; ajusta si es diferente
         pip install pytest
         # Asegura que el paquete local "app" se pueda importar
-        echo "PYTHONPATH=$(pwd)" >> $GITHUB_ENV
-        pytest
+        PYTHONPATH=$(pwd) pytest
 
   build:
     runs-on: ubuntu-latest
